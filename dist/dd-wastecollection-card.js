@@ -1,6 +1,6 @@
 class DDWasteCollectionCard extends HTMLElement {
 	set hass(hass) {
-		const VERSION="0.00.001";
+		const VERSION="0.00.002";
 		if (!this.content) {
 			this.innerHTML = `
 				<link type="text/css" rel="stylesheet" href="/local/community/DD-WasteCollection-Card/dd-wastecollection-card.css">
@@ -56,7 +56,7 @@ class DDWasteCollectionCard extends HTMLElement {
 	}
 }
 
-customElements.define("df-proxmox-card", DFProxmoxCard);
+customElements.define("dd-wastecollection-card", DDWasteCollectionCard);
 
 // Add card type to the Home Assistant card registry
 window.customCards = window.customCards || [];

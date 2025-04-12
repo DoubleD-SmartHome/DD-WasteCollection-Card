@@ -1,84 +1,39 @@
 	/* Layout */
 	/* 2025-03-23 4:47a */
 
-	df-proxmox-card {
+	dd-wastecollection-card {
 	    display: grid;
 	    height: 100%;
 	}
 
-        .df-proxmox-container {
+        .dd-wastecollection-container {
 	    height: 150px;
             display: grid;
-            grid-template-columns: repeat(6, 1fr); /* 6 equal-width columns */
-            grid-template-rows: repeat(3, 1fr); /* 2 equal-height rows */
+            grid-template-columns: repeat(4, 1fr); /* 6 equal-width columns */
+            grid-template-rows: repeat(4, 1fr); /* 2 equal-height rows */
             /* gap: 10px; /* Space between grid items */
             grid-template-areas: 
-                "Logo Main Main Main Status Status"
-                "Stats Stats Stats Stats Stats Stats"
-		"ActionLabel ActionLabel Actions Actions Actions Actions"; /* Define grid areas */
+                "Title Title Title Title"
+                "Image Image Image Other"
+		"Image Image Image Other"
+		"Image Image Image Other";
         }
 
-	.no-overflow {
-	    /* Ensure content doesn't exceed the grid cell */
-    	    overflow: hidden; /* Hides overflowing content */
-    	    text-overflow: ellipsis; /* Adds "..." to truncated text */
-    	    white-space: nowrap; /* Prevents text from wrapping to a new line */
+        .WC-Image {
+		grid-area: Image;
 	}
 
-        .grid-item {
-            /*background-color: #4CAF50;*/
-            /*color: white;*/
-            text-align: center;
-            /* padding: 10px; */
-            /*border: 1px solid #ddd;*/
-	    margin: auto;
-	    width: 100%;
-
-	    /* Ensure content doesn't exceed the grid cell */
-    	    /*overflow: hidden;*/ /* Hides overflowing content */
-    	    /*text-overflow: ellipsis;*/ /* Adds "..." to truncated text */
-    	    /*white-space: nowrap;*/ /* Prevents text from wrapping to a new line */
-        }
-
-        .logo {
-		grid-area: Logo;
-	}
-        .main {
-		grid-area: Main;
+        .WC-Title {
+		grid-area: Title;
 		padding: 5px;
 		text-align: left;
 	}
-        .status { grid-area: Status; }
 
-	.stats {
-		grid-area: Stats;
+	.WC-Other {
+		grid-area: Other;
 		text-align: -webkit-center;
 	}
 
-	.stat {
-		width: 20%;
-	}
-
-	.stat_label {}
-	.stat_value {}
-
-	.borderRed {
-		border-radius: 10px;
-		border: 2px solid red;
-		background: #690808;
-	}
-
-	.actionlabel { grid-area: ActionLabel; }
-
-	.actions { grid-area: Actions; }
-
-	.actions button {
-		color: goldenrod;
-	}
-		
-	.actions button:disabled {
-		color: gray !important; 
-	}
 /* Dark Mode CSS Code */
 @media (prefers-color-scheme: dark) {
 	.df-dark_supported {

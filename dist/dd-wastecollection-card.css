@@ -3,7 +3,7 @@
 
 	dd-wastecollection-card {
 	    display: grid;
-	    height: 500px;
+	    height: 100%;
 	}
 
         .dd-wastecollection-container {

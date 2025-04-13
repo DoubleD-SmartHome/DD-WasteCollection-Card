@@ -1,6 +1,6 @@
 class DDWasteCollectionCard extends HTMLElement {
 	set hass(hass) {
-		const VERSION="0.00.006";
+		const VERSION="0.00.007";
 		if (!this.content) {
 			this.innerHTML = `
 				<link type="text/css" rel="stylesheet" href="/local/community/DD-WasteCollection-Card/dd-wastecollection-card.css">
@@ -46,7 +46,7 @@ class DDWasteCollectionCard extends HTMLElement {
 	getLayoutOptions() {
 		return {
 			grid_rows: 2,
-			grid_columns: 2,
+			grid_columns: 3,
 			grid_min_rows: 2,
 			grid_max_rows: 2,
 		};

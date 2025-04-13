@@ -15,7 +15,7 @@ class DDWasteCollectionCard extends HTMLElement {
 		//const pickuptype = hass.states[this.config.entity] ? state_attr(this.config.entity, 'Pickup Type') : "unavailable";
 
 		const nextpickup = "Today";
-		const pickuptype = "garbage, recycling, greenbin";
+		const pickuptype = "garbage recycling greenbin";
 		
 		let myHTML = `
   			<div class="dd-wastecollection-container" title="${VERSION}">

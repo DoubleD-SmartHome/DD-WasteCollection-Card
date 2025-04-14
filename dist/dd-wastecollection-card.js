@@ -13,7 +13,8 @@ class DDWasteCollectionCard extends HTMLElement {
 		
 		//const nextpickup = hass.states[this.config.entity] ? new Date(hass.states[this.config.entity].state) : "unavailable";
 		const pickuptypes = hass.states[this.config.entity] ? state_attr(this.config.entity, 'Pickup Type') : "unavailable";
-		const garbage = pickuptypes.toLowerCase().includes("garbage");
+		//const garbage = pickuptypes.toLowerCase().includes("garbage");
+		const garbage = "true";
 		const nextpickup = "Today";
 		
 		let myHTML = `

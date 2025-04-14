@@ -14,9 +14,9 @@
             /* gap: 10px; /* Space between grid items */
             grid-template-areas: 
                 "Title Title Title Title"
-                "Image Image Image Other"
-		"Image Image Image Other"
-		"Image Image Image Other";
+                "Image Image WeekDay WeekDay"
+		"Image Image Month Month"
+		"Image Image Day Day";
         }
 
         .WC-Image {
@@ -26,14 +26,23 @@
         .WC-Title {
 		grid-area: Title;
 		padding: 5px;
-		text-align: left;
-	}
-
-	.WC-Other {
-		grid-area: Other;
 		text-align: -webkit-center;
 	}
 
+	.WC-WeekDay {
+		grid-area: WeekDay;
+		text-align: -webkit-center;
+	}
+
+	.WC-Month {
+		grid-area: Month;
+		text-align: -webkit-center;
+	}
+
+	.WC-Day {
+		grid-area: Day;
+		text-align: -webkit-center;
+	}
 /* Dark Mode CSS Code */
 @media (prefers-color-scheme: dark) {
 	.df-dark_supported {

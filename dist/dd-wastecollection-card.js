@@ -1,6 +1,6 @@
 class DDWasteCollectionCard extends HTMLElement {
 	set hass(hass) {
-		const VERSION="0.00.007";
+		const VERSION="0.00.008";
 		if (!this.content) {
 			this.innerHTML = `
 				<link type="text/css" rel="stylesheet" href="/local/community/DD-WasteCollection-Card/dd-wastecollection-card.css">
@@ -19,8 +19,11 @@ class DDWasteCollectionCard extends HTMLElement {
 		
 		let myHTML = `
   			<div class="dd-wastecollection-container" title="${VERSION}">
-     				${nextpickup}
-	 			${pickuptype}
+     				<div class="WC-Title">Waste Collection</div>
+	 			<div class="WC-Image">${pickuptype}</div>
+				<div class="WC-WeekDay">Friday</div>
+    				<div class="WC-Month">April</div>
+	 			<div class="WC-Day">18</div>
 			</div>
 		`;
 

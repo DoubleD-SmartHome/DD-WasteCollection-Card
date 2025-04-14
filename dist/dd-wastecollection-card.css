@@ -17,10 +17,19 @@
                 "Image Image WeekDay WeekDay"
 		"Image Image Month Month"
 		"Image Image Day Day";
+	    overflow: hidden;
         }
 
         .WC-Image {
 		grid-area: Image;
+		position: relative;
+		left: -16;
+		top: 16;
+		backgroud: white;
+		opacity: 0.5; /* 50% transparent */
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
 	}
 
         .WC-Title {

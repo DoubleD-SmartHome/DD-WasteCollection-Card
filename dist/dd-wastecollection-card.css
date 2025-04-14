@@ -20,22 +20,22 @@
 	    overflow: hidden;
         }
 
+        .WC-Title {
+		grid-area: Title;
+		padding-top: 16px;
+		text-align: -webkit-center;
+	}
+
         .WC-Image {
 		grid-area: Image;
 		position: relative;
-		left: -16;
-		top: 16;
-		backgroud: white;
-		opacity: 0.5; /* 50% transparent */
+		left: 5%;
+		top: 5%;
+		background: white;
+		opacity: 0.2; /* 50% transparent */
 		-moz-border-radius: 50px;
 		-webkit-border-radius: 50px;
 		border-radius: 50px;
-	}
-
-        .WC-Title {
-		grid-area: Title;
-		padding: 5px;
-		text-align: -webkit-center;
 	}
 
 	.WC-WeekDay {

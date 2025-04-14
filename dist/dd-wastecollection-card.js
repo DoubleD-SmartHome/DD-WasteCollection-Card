@@ -1,9 +1,9 @@
 class DDWasteCollectionCard extends HTMLElement {
 	set hass(hass) {
-		const VERSION="0.00.014";
+		const VERSION="0.00.010";
 		if (!this.content) {
 			this.innerHTML = `
-				<!-- <link type="text/css" rel="stylesheet" href="/local/community/DD-WasteCollection-Card/dd-wastecollection-card.css"> -->
+				<link type="text/css" rel="stylesheet" href="/local/community/DD-WasteCollection-Card/dd-wastecollection-card.css">
 				<ha-card>
   					<div class="card-content" style="padding: 0px;"></div>
     				</ha-card>
@@ -13,17 +13,16 @@ class DDWasteCollectionCard extends HTMLElement {
 		
 		//const nextpickup = hass.states[this.config.entity] ? new Date(hass.states[this.config.entity].state) : "unavailable";
 		const pickuptypes = hass.states[this.config.entity] ? state_attr(this.config.entity, 'Pickup Type') : "unavailable";
-		//const garbage = pickuptypes.toLowerCase().includes("garbage");
-		//const garbage = "true";
+		const garbage = pickuptypes.toLowerCase().includes("garbage")
 		const nextpickup = "Today";
 		
 		let myHTML = `
-  			<div class="add-wastecollection-container" title="${VERSION}">
-     				<div class="aWC-Title">Waste Collection</div>
-	 			<div class="aWC-Image">Garbage=</div>
-				<div class="aWC-WeekDay">Friday</div>
-    				<div class="aWC-Month">April</div>
-	 			<div class="aWC-Day">18</div>
+  			<div class="dd-wastecollection-container" title="${VERSION}">
+     				<div class="WC-Title">Waste Collection</div>
+	 			<div class="WC-Image">Garbage=${garbage}</div>
+				<div class="WC-WeekDay">Friday</div>
+    				<div class="WC-Month">April</div>
+	 			<div class="WC-Day">18</div>
 			</div>
 		`;
 

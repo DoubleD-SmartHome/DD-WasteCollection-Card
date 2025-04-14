@@ -1,11 +1,11 @@
 class DDWasteCollectionCard extends HTMLElement {
 	set hass(hass) {
-		const VERSION="0.00.008";
+		const VERSION="0.00.009";
 		if (!this.content) {
 			this.innerHTML = `
 				<link type="text/css" rel="stylesheet" href="/local/community/DD-WasteCollection-Card/dd-wastecollection-card.css">
 				<ha-card>
-  					<div class="card-content"></div>
+  					<div class="card-content" style="padding: 0px;"></div>
     				</ha-card>
 			`;
 			this.content = this.querySelector("div");

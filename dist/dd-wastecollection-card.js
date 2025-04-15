@@ -1,6 +1,6 @@
 class DDWasteCollectionCard extends HTMLElement {
 	set hass(hass) {
-		const VERSION="0.00.011";
+		const VERSION="0.00.012";
 		if (!this.content) {
 			this.innerHTML = `
 				<link type="text/css" rel="stylesheet" href="/local/community/DD-WasteCollection-Card/dd-wastecollection-card.css">
@@ -13,7 +13,7 @@ class DDWasteCollectionCard extends HTMLElement {
 		
 		//const nextpickup = hass.states[this.config.entity] ? new Date(hass.states[this.config.entity].state) : "unavailable";
 		const pickuptypes = hass.states[this.config.entity] ? state_attr(this.config.entity, 'Pickup Type') : "unavailable";
-		const garbage = pickuptypes.toLowerCase().includes("garbage")
+		const garbage = pickuptypes.toLowerCase().includes("garbage");
 		const nextpickup = "Today";
 		
 		let myHTML = `
